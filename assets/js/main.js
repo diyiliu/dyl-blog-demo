@@ -10,14 +10,12 @@
       if($('#loader').length > 0) {
         $('#loader').removeClass('show');
       }
-    }, 1);
+    }, 1000);
   };
   loader();
 
   // Stellar
   $(window).stellar();
-
-	
 	$('nav .dropdown').hover(function(){
 		var $this = $(this);
 		$this.addClass('show');
