@@ -1,0 +1,7 @@
+
+{"total": 100,
+"data":[
+  {"id":1,"username":"admin","name":"管理员","tel":"","email":"","role":"管理员角色","orgId":"","createTime":"","createUser":"","status":"","expireTime":"","loginCount":"","lastLoginIp":"","lastLoginTime":"","expireTimeStr":""},
+  {"id":2,"username":"test","name":"测试","tel":"8716669","email":"8716669@qq.com","role":"","orgId":"","createTime":"2018-05-10 16:46:47","createUser":"admin","status":1,"expireTime":"2019-05-09 16:45:26","loginCount":"","lastLoginIp":"","lastLoginTime":""},
+  {"id":3,"username":"test2","name":"测试用户角色","tel":"123","email":"456","role":"测试角色2","orgId":"","createTime":"2018-05-11 11:04:28","createUser":"admin","status":0,"expireTime":"2018-05-11 11:04:27","loginCount":"","lastLoginIp":"","lastLoginTime":""}
+]}

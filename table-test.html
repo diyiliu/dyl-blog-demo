@@ -13,6 +13,21 @@
     <link href="./assets/css/material-dashboard.min.css?v=2.0.2" rel="stylesheet"/>
     <!-- CSS Just for demo purpose, don't include it in your project -->
     <!--<link href="./assets/demo/demo.css" rel="stylesheet"/>-->
+
+    <style>
+        .nav-tabs-wrapper .nav-opt > :not(:first-child) {
+            margin-left: .25rem;
+        }
+
+        .nav-tabs-wrapper .nav-opt > :not(:last-child) {
+            margin-right: .25rem;
+        }
+
+        .nav-tabs-wrapper .nav-opt .nav-link {
+            background-color: rgba(255, 255, 255, .2);
+            transition: .3s background-color .2s;
+        }
+    </style>
 </head>
 
 <body class="">
@@ -161,61 +176,65 @@
         <!-- End Navbar -->
 
         <div class="content">
-            <div class="content">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="card">
-                                <div class="card-header card-header-tabs card-header-rose">
-                                    <div class="nav-tabs-navigation">
-                                        <div class="nav-tabs-wrapper">
-                                            <span class="nav-tabs-title"></span>
-                                            <ul class="nav nav-tabs" data-tabs="tabs">
-                                                <li class="nav-item">
-                                                    <a class="nav-link active" href="#profile" data-toggle="tab">
-                                                        <i class="material-icons">cloud_upload</i> 发布
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header card-header-tabs card-header-rose">
+                                <div class="nav-tabs-navigation">
+                                    <div class="nav-tabs-wrapper">
+                                        <span class="nav-tabs-title"></span>
+                                        <ul class="nav nav-tabs nav-opt" data-tabs="tabs">
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#profile" data-toggle="tab">
+                                                    <i class="material-icons">add_circle_outline</i> 新增
+                                                </a>
+                                            </li>
+
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#profile" data-toggle="tab">
+                                                    <i class="material-icons">remove_circle_outline</i> 删除
+                                                </a>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
-                                <div class="card-body table-responsive">
-                                    <table class="table table-hover">
-                                        <thead class="text-warning">
-                                        <th>ID</th>
-                                        <th>Name</th>
-                                        <th>Salary</th>
-                                        <th>Country</th>
-                                        </thead>
-                                        <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>Dakota Rice</td>
-                                            <td>$36,738</td>
-                                            <td>Niger</td>
-                                        </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td>Minerva Hooper</td>
-                                            <td>$23,789</td>
-                                            <td>Curaçao</td>
-                                        </tr>
-                                        <tr>
-                                            <td>3</td>
-                                            <td>Sage Rodriguez</td>
-                                            <td>$56,142</td>
-                                            <td>Netherlands</td>
-                                        </tr>
-                                        <tr>
-                                            <td>4</td>
-                                            <td>Philip Chaney</td>
-                                            <td>$38,735</td>
-                                            <td>Korea, South</td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
+                            </div>
+                            <div class="card-body table-responsive">
+                                <table class="table table-hover">
+                                    <thead class="text-warning">
+                                    <th>ID</th>
+                                    <th>Name</th>
+                                    <th>Salary</th>
+                                    <th>Country</th>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Dakota Rice</td>
+                                        <td>$36,738</td>
+                                        <td>Niger</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Minerva Hooper</td>
+                                        <td>$23,789</td>
+                                        <td>Curaçao</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Sage Rodriguez</td>
+                                        <td>$56,142</td>
+                                        <td>Netherlands</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>Philip Chaney</td>
+                                        <td>$38,735</td>
+                                        <td>Korea, South</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>
@@ -230,7 +249,7 @@
                     <script>
                         document.write(new Date().getFullYear())
                     </script>
-                    , made with  by
+                    , made with by
                     <a href="http://diyiliu.cc" target="_blank">帝一流</a> .
                 </div>
             </div>
