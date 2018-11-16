@@ -10,9 +10,10 @@
     <link rel="stylesheet" href="assets/css/console/googleapis.font.css">
     <link rel="stylesheet" href="assets/fonts/fontawesome/css/font-awesome.min.css">
 
-    <link rel="stylesheet" href="./assets/libs/summernote-0.8.9/summernote-bs4.css">
+
     <!-- CSS Files -->
     <link href="./assets/css/material-dashboard.min.css?v=2.0.2" rel="stylesheet"/>
+    <link rel="stylesheet" href="./assets/libs/summernote-0.8.9/summernote-bs4.css">
 
     <style>
         .note-editor.note-frame.card.fullscreen {
@@ -82,11 +83,37 @@
         .bootstrap-select.form-control {
             background-image: none;
         }
+
+        .preloader {
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 9999;
+            display: none;
+        }
+
+        .preloader .imgloader{
+            display:inline-block;
+            width:42px;
+            height:42px;
+            position:absolute;
+            top:calc(50% - 21px);
+            left:calc(50% - 20px)
+        }
     </style>
 
 </head>
 
 <body class="">
+
+<div class="preloader">
+    <div class="imgloader">
+        <img src="./assets/images/loader/bars.svg" width="40" alt="">
+    </div>
+</div>
 
 <div class="wrapper ">
 
@@ -325,8 +352,8 @@
                                 <div class="card-footer ">
                                     <div class="row">
                                         <div class="col-12 form-group">
-                                            <button type="submit" class="btn btn-rose">发布</button>
-                                            <button type="submit" class="btn btn-default">保存</button>
+                                            <button type="button" class="btn btn-rose" onclick="save(1)">发布</button>
+                                            <button type="button" class="btn btn-default" onclick="save(0)">保存</button>
                                         </div>
                                     </div>
                                 </div>
@@ -360,7 +387,7 @@
 
 
 <!--  Plugin for the Wizard, full documentation here: https://github.com/VinceG/twitter-bootstrap-wizard -->
-<script src="./assets/js/console/plugins/jquery.bootstrap-wizard.js"></script>
+<!--<script src="./assets/js/console/plugins/jquery.bootstrap-wizard.js"></script>-->
 <!--	Plugin for Select, full documentation here: http://silviomoreto.github.io/bootstrap-select -->
 <script src="./assets/js/console/plugins/bootstrap-selectpicker.js"></script>
 <!--	Plugin for Tags, full documentation here: https://github.com/bootstrap-tagsinput/bootstrap-tagsinputs  -->
@@ -368,6 +395,7 @@
 
 <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
 <script src="./assets/js/console/material-dashboard.min.js?v=2.0.2" type="text/javascript"></script>
+
 <script src="./assets/libs/summernote-0.8.9/summernote-bs4.js"></script>
 <script src="./assets/libs/summernote-0.8.9/lang/summernote-zh-CN.js"></script>
 
@@ -539,11 +567,41 @@
             });
         });
 
+        var height = $("div.main-panel").height() - 510;
         $('#summernote').summernote({
             lang: 'zh-CN',
-            height: 540
+            height: height,
+            toolbar: [
+                ['style', ['style']],
+                ['font', ['bold', 'underline', 'clear']],
+                ['color', ['color']],
+                ['para', ['ul', 'ol', 'paragraph']],
+                ['fontsize', ['fontsize']],
+                ['height', ['height']],
+                ['table', ['table']],
+                ['insert', ['link', 'picture']],
+                ['view', ['fullscreen']]
+            ],
+            callbacks: {
+                onImageUpload: function (files) {
+
+                    $('#summernote').summernote('insertImages', files);
+                }
+            }
         });
     });
+</script>
+
+<script>
+    function save(i) {
+        var markupStr = $('#summernote').summernote('code');
+        if (i == 1){
+            alert(markupStr);
+        } else {
+
+            alert($(markupStr).text());
+        }
+    }
 </script>
 </body>
 
