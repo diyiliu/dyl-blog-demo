@@ -10,7 +10,7 @@
       if($('#loader').length > 0) {
         $('#loader').removeClass('show');
       }
-    }, 300);
+    }, 100);
   };
   loader();
 
