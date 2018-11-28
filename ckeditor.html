@@ -1,0 +1,178 @@
+<!doctype html>
+<html>
+<head>
+    <title>帝一流博客 - 学习笔记</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="icon" type="image/ico" href="./assets/images/favicon.ico">
+
+    <link rel="stylesheet" href="assets/css/googleapis.font.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome/css/font-awesome.min.css">
+
+    <!-- Theme Style -->
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/libs/bootstrap-4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/libs/summernote-0.8.9/summernote-bs4.css">
+    <link rel="stylesheet" href="assets/libs/bootstrap-select-1.13.2/css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="assets/libs/bootstrap-tagsinput-0.6.1/bootstrap-tagsinput.css">
+    <link href="./assets/css/material-dashboard.min.css?v=2.0.2" rel="stylesheet"/>
+    <style>
+        .bootstrap-tagsinput {
+            width: 100%;
+        }
+
+        .bootstrap-tagsinput .tag {
+            background-color: #00bcd4;
+            color: #fff;
+        }
+
+        .label {
+            display: inline;
+            padding: .2em .6em .3em;
+            font-size: 75%;
+            font-weight: 700;
+            line-height: 1;
+            color: #fff;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: baseline;
+            border-radius: .25em;
+        }
+    </style>
+</head>
+<body>
+
+<header role="banner">
+    <div class="top-bar">
+        <div class="container">
+            <div class="row">
+                <div class="col-9 social">
+                    <a href="#"><span class="fa fa-home"></span></a>
+                    <a href="#"><span class="fa fa-backward"></span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- END header -->
+
+<section class="site-section pt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h2 class="mb-4"># 编辑</h2>
+            </div>
+        </div>
+        <div class="row blog-entries">
+            <div class="col-12 main-content">
+                <form action="#" method="post">
+                    <div class="card ">
+                        <div class="card-body ">
+                            <form method="#" action="#">
+                                <div class="form-group">
+                                    <label for="title" class="bmd-label-floating">标题</label>
+                                    <input type="text" class="form-control" id="title">
+                                </div>
+                                <div class="form-group">
+                                    <textarea name="editor1" id="editor1" rows="10" cols="80"></textarea>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6 form-group">
+                                        <label for="title" class="bmd-label-floating">博客分类</label>
+                                        <select class="selectpicker form-control"
+                                                data-style="select-with-transition"
+                                                title="选择分类" data-size="5">
+                                            <option value="2">Paris</option>
+                                            <option value="3">Bucharest</option>
+                                            <option value="4">Rome</option>
+                                            <option value="5">New York</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="col-md-6 form-group">
+                                        <label for="title" class="bmd-label-floating">文章类型</label>
+                                        <select class="selectpicker form-control"
+                                                data-style="select-with-transition"
+                                                title="选择类型" data-size="5">
+                                            <option value="2">Paris</option>
+                                            <option value="3">Bucharest</option>
+                                            <option value="4">Rome</option>
+                                            <option value="5">New York</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="title" class="bmd-label-floating">内容标签</label>
+                                    <div>
+                                        <input type="text" class="form-control tag"
+                                               value="Amsterdam,Washington,Sydney,Beijing,Cairo" data-role="tagsinput"/>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="card-footer ">
+                            <button type="button" class="btn btn-default">保存</button>
+                            <button type="button" class="btn btn-primary">发布</button>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<footer class="site-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                Copyright &copy;<script>document.write(new Date().getFullYear());</script>
+                All rights reserved | This site is made with by <a href="http://diyiliu.cc" target="_blank">帝一流</a>
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- END footer -->
+
+<!-- loader -->
+<div id="loader" class="show fullscreen">
+    <svg class="circular" width="48px" height="48px">
+        <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/>
+        <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+                stroke="#f4b214"/>
+    </svg>
+</div>
+
+<script src="assets/js/jquery-3.2.1.min.js"></script>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/jquery-migrate-3.0.0.js"></script>
+<script src="assets/js/jquery.waypoints.min.js"></script>
+<script src="assets/js/jquery.stellar.min.js"></script>
+<script src="assets/js/owl.carousel.min.js"></script>
+
+<script src="assets/libs/bootstrap-4.1.3/js/bootstrap.min.js"></script>
+
+<script src="assets/libs/bootstrap-select-1.13.2/js/bootstrap-select.min.js"></script>
+<script src="assets/libs/bootstrap-tagsinput-0.6.1/bootstrap-tagsinput.min.js"></script>
+<script src="assets/libs/summernote-0.8.9/summernote-bs4.js"></script>
+<script src="assets/libs/summernote-0.8.9/lang/summernote-zh-CN.js"></script>
+<script src="assets/libs/ckeditor/ckeditor.js"></script>
+<script src="assets/js/main.js"></script>
+
+<script>
+    $(function () {
+        CKEDITOR.replace( 'editor1', {
+                customConfig: './config-osc.js'
+            }
+        );
+    });
+</script>
+</body>
+</html>
