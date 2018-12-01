@@ -32,7 +32,7 @@
 
 <div class="wrapper ">
 
-    <div class="sidebar" data-color="azure" data-background-color="white"
+    <div class="sidebar" data-color="azure" data-background-color="black"
          data-image="./assets/images/console/sidebar-1.jpg">
         <!--
             Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
@@ -193,6 +193,14 @@
                                 </div>
                             </div>
                             <div class="card-body table-responsive">
+                                <div class="btn-group-justified" role="group" id="toolbar">
+                                    <button type="button" class="btn btn-success" id="addItem" data-title="新增资源">
+                                        <i class="fa fa-fw fa-plus"></i>
+                                    </button>
+                                    <button type="button" class="btn btn-cyan" id="editItem" data-title="修改资源">
+                                        <i class="fa fa-fw fa-pencil"></i>
+                                    </button>
+                                </div>
                                 <table class="table" id="myTable"></table>
                             </div>
                         </div>
@@ -400,6 +408,7 @@
     var tableHeight = $("div.main-panel").height() - 326;
     $table.bootstrapTable({
         // locale: 'zh-CN',
+        toolbar: '#toolbar',
         height: tableHeight,
         classes: 'table-no-bordered',
         sidePagination: 'server',

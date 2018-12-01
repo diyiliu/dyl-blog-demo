@@ -1,0 +1,41 @@
+/*
+Template Name: Admin Template
+Author: Wrappixel
+
+File: scss
+*/
+body {
+  margin: 0;
+  font-family: "Rubik", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #6c757d;
+  text-align: left;
+  background-color: #edf1f5;
+}
+
+body h1{
+  font-family: "Rubik", sans-serif; !important;
+}
+
+
+/*******************
+Error Page
+******************/
+.error-box {
+  height: 100%;
+  position: fixed;
+  width: 100%; }
+  .error-box .footer {
+    width: 100%;
+    left: 0px;
+    right: 0px; }
+
+.error-body {
+  padding-top: 5%; }
+  .error-body h1 {
+    font-size: 210px;
+    font-weight: 900;
+    text-shadow: 4px 4px 0 #fff, 6px 6px 0 #343a40;
+    line-height: 210px; }
