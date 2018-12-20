@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+
+    <title>帝一流博客 - 后台管理</title>
+
+    <!--     Fonts and icons     -->
+    <link rel="stylesheet" href="assets/css/console/googleapis.font.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome/css/font-awesome.min.css">
+
+
+    <!-- CSS Files -->
+    <link href="./assets/css/material-dashboard.min.css?v=2.0.2" rel="stylesheet"/>
+
+    <style>
+        body::-webkit-scrollbar {
+            display:none
+        }
+
+        .note-editor.note-frame.card.fullscreen {
+            top: -30px;
+        }
+
+        .note-editor.note-frame {
+            border: 1px solid #e9ecef;
+        }
+
+        html body blockquote {
+            border-left: 5px solid #eee;
+        }
+
+        pre {
+            width: 100%;
+            color: #333;
+            background-color: #f5f5f5;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .custom-control-input:checked ~ .custom-control-indicator::before {
+            color: #fff;
+            background-color: #9c27b0;
+        }
+
+        .custom-control-input:checked ~ .custom-control-indicator::after {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E");
+        }
+
+        .custom-control-indicator::before {
+            position: absolute;
+            top: 0.15rem;
+            left: 0;
+            display: block;
+            width: 1rem;
+            height: 1rem;
+            pointer-events: none;
+            content: "";
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            background-color: #dee2e6;
+        }
+
+        .custom-control-indicator::after {
+            position: absolute;
+            top: 0.15rem;
+            left: 0;
+            display: block;
+            width: 1rem;
+            height: 1rem;
+            content: "";
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 50% 50%;
+        }
+
+        .note-image-input.note-form-control.note-input {
+            opacity: 1;
+            position: relative;
+            z-index: 100;
+        }
+
+        .bootstrap-select.form-control {
+            background-image: none;
+        }
+
+        .preloader {
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 9999;
+            display: none;
+        }
+
+        .preloader .imgloader{
+            display:inline-block;
+            width:42px;
+            height:42px;
+            position:absolute;
+            top:calc(50% - 21px);
+            left:calc(50% - 20px)
+        }
+    </style>
+</head>
+
+<body class="">
+
+<div class="preloader">
+    <div class="imgloader">
+        <img src="./assets/images/loader/bars.svg" width="40" alt="">
+    </div>
+</div>
+
+<div class="wrapper ">
+
+    <div class="sidebar" data-color="azure" data-background-color="white"
+         data-image="./assets/images/console/sidebar-1.jpg">
+        <!--
+            Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
+
+            Tip 2: you can also add an image using data-image tag
+        -->
+
+        <div class="logo">
+            <a href="http://www.creative-tim.com" class="simple-text logo-mini">DYL</a>
+
+            <a href="http://www.creative-tim.com" class="simple-text logo-normal">后台管理</a>
+        </div>
+
+        <div class="sidebar-wrapper">
+            <div class="user">
+                <div class="photo">
+                    <img src="./assets/images/console/faces/marc.jpg"/>
+                </div>
+                <div class="user-info">
+                    <a data-toggle="collapse" href="#collapseExample" class="username">
+                        <span>admin</span>
+                    </a>
+                </div>
+            </div>
+            <ul class="nav">
+                <li class="nav-item ">
+                    <a class="nav-link" href="dashboard.html">
+                        <i class="material-icons">dashboard</i>
+                        <p> 控制面板 </p>
+                    </a>
+                </li>
+
+                <li class="nav-item active">
+                    <a class="nav-link" href="editor.html">
+                        <i class="material-icons">assignment</i>
+                        <p> 博客管理 </p>
+                    </a>
+                </li>
+
+                <li class="nav-item ">
+                    <a class="nav-link" data-toggle="collapse" href="#pagesExamples">
+                        <i class="material-icons">image</i>
+                        <p> Pages
+                            <b class="caret"></b>
+                        </p>
+                    </a>
+
+                    <div class="collapse" id="pagesExamples">
+                        <ul class="nav">
+                            <li class="nav-item ">
+                                <a class="nav-link" href="../examples/pages/login.html">
+                                    <span class="sidebar-mini"><i class="fa fa-circle-o"></i></span>
+                                    <span class="sidebar-normal"> Login Page </span>
+                                </a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link" href="../examples/pages/register.html">
+                                    <span class="sidebar-mini"><i class="fa fa-circle-o"></i></span>
+                                    <span class="sidebar-normal"> Register Page </span>
+                                </a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link" href="../examples/pages/lock.html">
+                                    <span class="sidebar-mini"><i class="fa fa-circle-o"></i></span>
+                                    <span class="sidebar-normal"> Lock Screen Page </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="main-panel">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top " id="navigation-example">
+            <div class="container-fluid">
+                <div class="navbar-wrapper">
+
+                    <div class="navbar-minimize">
+                        <button id="minimizeSidebar" class="btn btn-just-icon btn-white btn-fab btn-round">
+                            <i class="material-icons text_align-center visible-on-sidebar-regular">more_vert</i>
+                            <i class="material-icons design_bullet-list-67 visible-on-sidebar-mini">view_list</i>
+                        </button>
+                    </div>
+                    <a class="navbar-brand" href="#pablo">我的博客</a>
+                </div>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index"
+                        aria-expanded="false" aria-label="Toggle navigation" data-target="#navigation-example">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="navbar-toggler-icon icon-bar"></span>
+                    <span class="navbar-toggler-icon icon-bar"></span>
+                    <span class="navbar-toggler-icon icon-bar"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-end">
+                    <form class="navbar-form">
+                        <div class="input-group no-border">
+                            <input type="text" value="" class="form-control" placeholder="Search...">
+                            <button type="submit" class="btn btn-white btn-round btn-just-icon">
+                                <i class="material-icons">search</i>
+                                <div class="ripple-container"></div>
+                            </button>
+                        </div>
+                    </form>
+
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="javascript:void(0)" id="navbarDropdownMenuLink"
+                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="material-icons">notifications</i>
+                                <span class="notification">5</span>
+                                <p class="d-lg-none d-md-block">
+                                    Some Actions
+                                </p>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="#">Mike John responded to your email</a>
+                                <a class="dropdown-item" href="#">You have 5 new tasks</a>
+                                <a class="dropdown-item" href="#">You're now friend with Andrew</a>
+                                <a class="dropdown-item" href="#">Another Notification</a>
+                                <a class="dropdown-item" href="#">Another One</a>
+                            </div>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="javascript:void(0)" id="accountDropdownMenuLink"
+                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="material-icons">person</i>
+                                <p class="d-lg-none d-md-block">
+                                    Account
+                                </p>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="accountDropdownMenuLink">
+                                <a class="dropdown-item" href="#">Mike John responded to your email</a>
+                                <a class="dropdown-item" href="#">You have 5 new tasks</a>
+                                <a class="dropdown-item" href="#">You're now friend with Andrew</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- End Navbar -->
+
+        <div class="content">
+            <div class="content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="card ">
+                                <div class="card-header card-header-rose card-header-icon">
+                                    <div class="card-icon">
+                                        <i class="material-icons">edit</i>
+                                    </div>
+                                    <h4 class="card-title">编辑</h4>
+                                </div>
+                                <div class="card-body ">
+                                    <form method="#" action="#">
+                                        <div class="form-group">
+                                            <label for="title" class="bmd-label-floating">标题</label>
+                                            <input type="text" class="form-control" id="title">
+                                        </div>
+                                        <div class="form-group">
+                                            <div name="ckeditor" id="ckeditor">
+
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card ">
+                                <div class="card-header card-header-rose card-header-icon">
+                                    <div class="card-icon">
+                                        <i class="material-icons">category</i>
+                                    </div>
+                                    <h4 class="card-title">类别</h4>
+                                </div>
+                                <div class="card-body ">
+                                    <form class="form-horizontal">
+                                        <div class="row">
+                                            <label class="col-md-2 col-form-label">博客分类</label>
+                                            <div class="col-md-10">
+                                                <select class="selectpicker form-control"
+                                                        data-style="select-with-transition"
+                                                        title="选择分类" data-size="5">
+                                                    <option value="2">Paris</option>
+                                                    <option value="3">Bucharest</option>
+                                                    <option value="4">Rome</option>
+                                                    <option value="5">New York</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <label class="col-md-2 col-form-label">文章类型</label>
+                                            <div class="col-md-10">
+                                                <select class="selectpicker form-control"
+                                                        data-style="select-with-transition"
+                                                        title="选择类型" data-size="5">
+                                                    <option value="2">Paris</option>
+                                                    <option value="3">Bucharest</option>
+                                                    <option value="4">Rome</option>
+                                                    <option value="5">New York</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <label class="col-md-2 col-form-label">内容标签</label>
+                                            <div class="col-md-10">
+                                                <div class="form-group">
+                                                    <input type="text" value="开发,Java"
+                                                           class="form-control tagsinput" data-role="tagsinput"
+                                                           data-color="info">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <label class="col-md-2 col-form-label">仅自己可见</label>
+                                            <div class="col-md-10">
+                                                <div class="form-group togglebutton">
+                                                    <label>
+                                                        <input type="checkbox" checked="">
+                                                        <span class="toggle"></span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="card-footer ">
+                                    <div class="row">
+                                        <div class="col-12 form-group">
+                                            <button type="button" class="btn btn-rose" onclick="save(1)">发布</button>
+                                            <button type="button" class="btn btn-default" onclick="save(0)">保存</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="container-fluid">
+                <div class="copyright float-right">
+                    &copy;
+                    <script>
+                        document.write(new Date().getFullYear())
+                    </script>
+                    , made with by
+                    <a href="http://diyiliu.cc" target="_blank">帝一流</a> .
+                </div>
+            </div>
+        </footer>
+    </div>
+</div>
+
+<!--   Core JS Files   -->
+<script src="./assets/js/console/core/jquery.min.js" type="text/javascript"></script>
+<script src="./assets/js/console/core/popper.min.js" type="text/javascript"></script>
+<script src="./assets/js/console/core/bootstrap-material-design.min.js" type="text/javascript"></script>
+<script src="./assets/js/console/plugins/perfect-scrollbar.jquery.min.js"></script>
+
+
+<!--  Plugin for the Wizard, full documentation here: https://github.com/VinceG/twitter-bootstrap-wizard -->
+<!--<script src="./assets/js/console/plugins/jquery.bootstrap-wizard.js"></script>-->
+<!--	Plugin for Select, full documentation here: http://silviomoreto.github.io/bootstrap-select -->
+<script src="./assets/js/console/plugins/bootstrap-selectpicker.js"></script>
+<!--	Plugin for Tags, full documentation here: https://github.com/bootstrap-tagsinput/bootstrap-tagsinputs  -->
+<script src="./assets/js/console/plugins/bootstrap-tagsinput.js"></script>
+
+<!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
+<script src="./assets/js/console/material-dashboard.min.js?v=2.0.2" type="text/javascript"></script>
+<script src="./assets/libs/ckeditor/ckeditor.js"></script>
+<script src="./assets/libs/ckeditor/plugins/codesnippet/lib/highlight/highlight.pack.js"></script>
+<script>
+    $(document).ready(function () {
+        $().ready(function () {
+            $sidebar = $('.sidebar');
+
+            $sidebar_img_container = $sidebar.find('.sidebar-background');
+
+            $full_page = $('.full-page');
+
+            $sidebar_responsive = $('body > .navbar-collapse');
+
+            window_width = $(window).width();
+
+            fixed_plugin_open = $('.sidebar .sidebar-wrapper .nav li.active a p').html();
+
+            if (window_width > 767 && fixed_plugin_open == 'Dashboard') {
+                if ($('.fixed-plugin .dropdown').hasClass('show-dropdown')) {
+                    $('.fixed-plugin .dropdown').addClass('open');
+                }
+            }
+
+            $('.fixed-plugin a').click(function (event) {
+                // Alex if we click on switch, stop propagation of the event, so the dropdown will not be hide, otherwise we set the  section active
+                if ($(this).hasClass('switch-trigger')) {
+                    if (event.stopPropagation) {
+                        event.stopPropagation();
+                    } else if (window.event) {
+                        window.event.cancelBubble = true;
+                    }
+                }
+            });
+
+            $('.fixed-plugin .active-color span').click(function () {
+                $full_page_background = $('.full-page-background');
+
+                $(this).siblings().removeClass('active');
+                $(this).addClass('active');
+
+                var new_color = $(this).data('color');
+
+                if ($sidebar.length != 0) {
+                    $sidebar.attr('data-color', new_color);
+                }
+
+                if ($full_page.length != 0) {
+                    $full_page.attr('filter-color', new_color);
+                }
+
+                if ($sidebar_responsive.length != 0) {
+                    $sidebar_responsive.attr('data-color', new_color);
+                }
+            });
+
+            $('.fixed-plugin .background-color .badge').click(function () {
+                $(this).siblings().removeClass('active');
+                $(this).addClass('active');
+
+                var new_color = $(this).data('background-color');
+
+                if ($sidebar.length != 0) {
+                    $sidebar.attr('data-background-color', new_color);
+                }
+            });
+
+            $('.fixed-plugin .img-holder').click(function () {
+                $full_page_background = $('.full-page-background');
+
+                $(this).parent('li').siblings().removeClass('active');
+                $(this).parent('li').addClass('active');
+
+
+                var new_image = $(this).find("img").attr('src');
+
+                if ($sidebar_img_container.length != 0 && $('.switch-sidebar-image input:checked').length != 0) {
+                    $sidebar_img_container.fadeOut('fast', function () {
+                        $sidebar_img_container.css('background-image', 'url("' + new_image + '")');
+                        $sidebar_img_container.fadeIn('fast');
+                    });
+                }
+
+                if ($full_page_background.length != 0 && $('.switch-sidebar-image input:checked').length != 0) {
+                    var new_image_full_page = $('.fixed-plugin li.active .img-holder').find('img').data('src');
+
+                    $full_page_background.fadeOut('fast', function () {
+                        $full_page_background.css('background-image', 'url("' + new_image_full_page + '")');
+                        $full_page_background.fadeIn('fast');
+                    });
+                }
+
+                if ($('.switch-sidebar-image input:checked').length == 0) {
+                    var new_image = $('.fixed-plugin li.active .img-holder').find("img").attr('src');
+                    var new_image_full_page = $('.fixed-plugin li.active .img-holder').find('img').data('src');
+
+                    $sidebar_img_container.css('background-image', 'url("' + new_image + '")');
+                    $full_page_background.css('background-image', 'url("' + new_image_full_page + '")');
+                }
+
+                if ($sidebar_responsive.length != 0) {
+                    $sidebar_responsive.css('background-image', 'url("' + new_image + '")');
+                }
+            });
+
+            $('.switch-sidebar-image input').change(function () {
+                $full_page_background = $('.full-page-background');
+
+                $input = $(this);
+
+                if ($input.is(':checked')) {
+                    if ($sidebar_img_container.length != 0) {
+                        $sidebar_img_container.fadeIn('fast');
+                        $sidebar.attr('data-image', '#');
+                    }
+
+                    if ($full_page_background.length != 0) {
+                        $full_page_background.fadeIn('fast');
+                        $full_page.attr('data-image', '#');
+                    }
+
+                    background_image = true;
+                } else {
+                    if ($sidebar_img_container.length != 0) {
+                        $sidebar.removeAttr('data-image');
+                        $sidebar_img_container.fadeOut('fast');
+                    }
+
+                    if ($full_page_background.length != 0) {
+                        $full_page.removeAttr('data-image', '#');
+                        $full_page_background.fadeOut('fast');
+                    }
+
+                    background_image = false;
+                }
+            });
+
+            $('.switch-sidebar-mini input').change(function () {
+                $body = $('body');
+
+                $input = $(this);
+
+                if (md.misc.sidebar_mini_active == true) {
+                    $('body').removeClass('sidebar-mini');
+                    md.misc.sidebar_mini_active = false;
+
+                    $('.sidebar .sidebar-wrapper, .main-panel').perfectScrollbar();
+
+                } else {
+
+                    $('.sidebar .sidebar-wrapper, .main-panel').perfectScrollbar('destroy');
+
+                    setTimeout(function () {
+                        $('body').addClass('sidebar-mini');
+
+                        md.misc.sidebar_mini_active = true;
+                    }, 300);
+                }
+
+                // we simulate the window Resize so the charts will get updated in realtime.
+                var simulateWindowResize = setInterval(function () {
+                    window.dispatchEvent(new Event('resize'));
+                }, 180);
+
+                // we stop the simulation of Window Resize after the animations are completed
+                setTimeout(function () {
+                    clearInterval(simulateWindowResize);
+                }, 1000);
+            });
+        });
+
+        CKEDITOR.replace('ckeditor', {
+            config: './config.js',
+            height: 460
+        });
+
+    });
+</script>
+
+<script>
+    function save(i) {
+        var markupStr = CKEDITOR.currentInstance.getData() ;
+        var str = CKEDITOR.currentInstance.document.getBody().getText();
+
+        alert(markupStr);
+    }
+</script>
+</body>
+
+</html>

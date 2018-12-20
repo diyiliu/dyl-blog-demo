@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-    <title>帝一流博客 - 学习笔记</title>
+    <title>DYL博客 - 记录成长过程</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -21,11 +21,12 @@
     <!-- Theme Style -->
     <link rel="stylesheet" href="assets/css/style.css">
     <style>
-        .layui-laypage{
+        .layui-laypage {
             margin-bottom: 5em;
         }
-        .layui-laypage  a,
-        .layui-laypage  span{
+
+        .layui-laypage a,
+        .layui-laypage span {
             border-radius: 50% !important;
             width: 60px;
             height: 60px;
@@ -39,23 +40,38 @@
             border: 1px solid #dee2e6
         }
 
-        .layui-laypage .layui-laypage-curr{
+        .layui-laypage .layui-laypage-curr {
             background: #007bff;
             color: #fff;
             border: 1px solid transparent;
         }
 
-        .layui-laypage  a:hover {
+        .layui-laypage a:hover {
             background: #007bff;
             color: #fff;
             border: 1px solid transparent;
         }
 
-        .blog-entries .blog-entry .image{
+        .blog-entries .blog-entry .image {
             width: 100%;
             height: 240px;
             background-size: cover;
             background-position: center center;
+        }
+
+        #wx-img {
+            width: 215px;
+            height: 215px;
+            background-size: cover;
+            background-position: center center;
+        }
+
+        .pay .img{
+            width: 210px;
+            height: 210px;
+            background-size: cover;
+            background-position: top center;
+            display: inline-block;
         }
     </style>
 </head>
@@ -82,7 +98,8 @@
     <div class="container logo-wrap">
         <div class="row pt-5">
             <div class="col-12 text-center">
-                <a class="absolute-toggle d-block d-md-none" data-toggle="collapse" href="#navbarMenu" role="button" aria-expanded="false" aria-controls="navbarMenu"><span class="burger-lines"></span></a>
+                <a class="absolute-toggle d-block d-md-none" data-toggle="collapse" href="#navbarMenu" role="button"
+                   aria-expanded="false" aria-controls="navbarMenu"><span class="burger-lines"></span></a>
             </div>
         </div>
     </div>
@@ -97,13 +114,15 @@
                         <a class="nav-link active" href="index.html">首页</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="category.html" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">开发</a>
+                        <a class="nav-link dropdown-toggle" href="category.html" id="dropdown04" data-toggle="dropdown"
+                           aria-haspopup="true" aria-expanded="false">开发</a>
                         <div class="dropdown-menu" aria-labelledby="dropdown04">
                             <a class="dropdown-item" href="#">Java</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="category.html" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">运维</a>
+                        <a class="nav-link dropdown-toggle" href="category.html" id="dropdown05" data-toggle="dropdown"
+                           aria-haspopup="true" aria-expanded="false">运维</a>
                         <div class="dropdown-menu" aria-labelledby="dropdown05">
                             <a class="dropdown-item" href="#">Linux</a>
                         </div>
@@ -128,18 +147,22 @@
 
                 <div class="owl-carousel owl-theme home-slider">
                     <div>
-                        <a href="blog-single.html" class="a-block d-flex align-items-center height-lg" style="background-image: url('assets/images/img_1.jpg'); ">
+                        <a href="blog-single.html" class="a-block d-flex align-items-center height-lg"
+                           style="background-image: url('assets/images/img_1.jpg'); ">
                             <div class="text half-to-full">
                                 <h3>There’s a Cool New Way for Men to Wear Socks and Sandals</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem nobis, ut dicta eaque ipsa laudantium!</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem nobis, ut dicta
+                                    eaque ipsa laudantium!</p>
                             </div>
                         </a>
                     </div>
                     <div>
-                        <a href="blog-single.html" class="a-block d-flex align-items-center height-lg" style="background-image: url('assets/images/img_2.jpg'); ">
+                        <a href="blog-single.html" class="a-block d-flex align-items-center height-lg"
+                           style="background-image: url('assets/images/img_2.jpg'); ">
                             <div class="text half-to-full">
                                 <h3>There’s a Cool New Way for Men to Wear Socks and Sandals</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem nobis, ut dicta eaque ipsa laudantium!</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem nobis, ut dicta
+                                    eaque ipsa laudantium!</p>
                             </div>
                         </a>
                     </div>
@@ -303,17 +326,22 @@
                 <!-- END sidebar-box -->
                 <div class="sidebar-box">
                     <div class="bio text-center">
-                        <img src="assets/images/person_1.jpg" alt="Image Placeholder" class="img-fluid">
+                        <img src="assets/images/person_0.jpg" alt="Image Placeholder" class="img-fluid">
                         <div class="bio-body">
                             <h2>Meagan Smith</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem facilis sunt repellendus excepturi beatae porro debitis voluptate nulla quo veniam fuga sit molestias minus.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem facilis sunt
+                                repellendus excepturi beatae porro debitis voluptate nulla quo veniam fuga sit molestias
+                                minus.</p>
                             <p><a href="#" class="btn btn-primary btn-sm">个人简历</a></p>
-                            <p class="social">
+
+                            <div class="social">
                                 <a href="#" class="p-2"><span class="fa fa-github"></span></a>
-                                <a href="#" class="p-2"><span class="fa fa-wechat"></span></a>
-                                <a href="#" class="p-2"><span class="fa fa-qq"></span></a>
-                                <a href="#" class="p-2"><span class="fa fa-weibo"></span></a>
-                            </p>
+                                <a href="#" class="p-2" id="wechat" data-toggle="dropdown"
+                                   aria-haspopup="true" aria-expanded="false"><span class="fa fa-wechat"></span></a>
+                                <div class="dropdown-menu" aria-labelledby="wechat">
+                                    <div id="wx-img" style="background-image: url('assets/images/wx.jpg'); "></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -402,11 +430,12 @@
 <footer class="site-footer">
     <div class="container">
         <div class="row mb-5">
-            <div class="col-md-4">
-                <h3>Paragraph</h3>
-                <p>
-                    <img src="assets/images/img_1.jpg" alt="Image placeholder" class="img-fluid">
-                </p>
+            <div class="col-md-6">
+                <h3>赞赏</h3>
+                <div class="pay">
+                    <div class="img" style=" background-image: url('assets/images/img_1.jpg');"></div>
+                    <div class="img" style=" background-image: url('assets/images/img_1.jpg');"></div>
+                </div>
             </div>
             <div class="col-md-6 ml-auto">
                 <div class="row">
@@ -460,7 +489,8 @@
         <div class="row">
             <div class="col-md-12">
                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This site is made with  by <a href="http://diyiliu.cc" target="_blank">帝一流</a>
+                Copyright &copy;<script>document.write(new Date().getFullYear());</script>
+                All rights reserved | This site is made with by <a href="http://diyiliu.cc" target="_blank">帝一流</a>
                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
             </div>
         </div>
@@ -472,7 +502,8 @@
 <div id="loader" class="show fullscreen">
     <svg class="circular" width="48px" height="48px">
         <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/>
-        <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#f4b214"/>
+        <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+                stroke="#f4b214"/>
     </svg>
 </div>
 
@@ -489,7 +520,9 @@
 <script src="assets/js/main.js"></script>
 <script>
     $(function () {
-        layui.use(['laypage'], function() {
+        $('[data-toggle="popover"]').popover();
+
+        layui.use(['laypage'], function () {
             var laypage = layui.laypage;
             laypage.render({
                 elem: 'page'
@@ -498,7 +531,7 @@
                 , groups: 3
                 , prev: '<'
                 , next: '>'
-                ,jump: function(obj, first){
+                , jump: function (obj, first) {
                     //obj包含了当前分页的所有参数，比如：
                     console.log(obj.curr); //得到当前页，以便向服务端请求对应页的数据。
                     console.log(obj.limit); //得到每页显示的条数

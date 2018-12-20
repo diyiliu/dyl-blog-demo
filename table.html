@@ -11,9 +11,9 @@
     <link rel="stylesheet" href="assets/fonts/fontawesome/css/font-awesome.min.css">
     <!-- CSS Files -->
     <link href="./assets/css/material-dashboard.min.css?v=2.0.2" rel="stylesheet"/>
+    <!--<link href="./assets/libs/bootstrap-table/bootstrap-table.css" rel="stylesheet"/>-->
     <!-- CSS Just for demo purpose, don't include it in your project -->
     <!--<link href="./assets/demo/demo.css" rel="stylesheet"/>-->
-    <link href="./assets/libs/bootstrap-table/bootstrap-table.css" rel="stylesheet"/>
 
     <style>
         .bootstrap-table .table:not(.table-condensed),
@@ -25,7 +25,12 @@
             padding:12px 8px;
         }
 
+        .bootstrap-table .table > thead > tr > th {
+            border-bottom: 2px solid #ddd;
+        }
+
     </style>
+
 </head>
 
 <body class="">
@@ -397,10 +402,8 @@
 
 <script>
     var $table = $('#myTable');
-    var tableHeight = $("div.main-panel").height() - 326;
     $table.bootstrapTable({
         // locale: 'zh-CN',
-        height: tableHeight,
         classes: 'table-no-bordered',
         sidePagination: 'server',
         url: './assets/data/user.json',

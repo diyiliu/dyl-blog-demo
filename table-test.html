@@ -201,7 +201,7 @@
                                 </div>
                             </div>
                             <div class="card-body table-responsive">
-                                <table class="table table-hover">
+                                <table id="myTable" class="table table-hover">
                                     <thead class="text-warning">
                                     <th>ID</th>
                                     <th>Name</th>
@@ -264,6 +264,7 @@
 <script src="./assets/js/console/plugins/perfect-scrollbar.jquery.min.js"></script>
 <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
 <script src="./assets/js/console/material-dashboard.min.js?v=2.0.2" type="text/javascript"></script>
+<script src="assets/js/jquery.tabledit.js"></script>
 <script>
     $(document).ready(function () {
         $().ready(function () {
@@ -431,6 +432,17 @@
                 }, 1000);
             });
         });
+    });
+
+    $('#myTable').Tabledit({
+        url: '/test/save',
+        editButton: false,
+        deleteButton: false,
+        hideIdentifier: true,
+        columns: {
+            identifier: [0, 'ID'],
+            editable: [[1, 'Name'], [2, 'Salary']]
+        }
     });
 </script>
 </body>
